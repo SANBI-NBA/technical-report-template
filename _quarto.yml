@@ -1,0 +1,59 @@
+project:
+ type: book
+ preview:
+  browser: false
+ 
+book:
+  title: "Report title"
+  author: "Report author"
+  date: last-modified
+  chapters:
+    - index.qmd
+    - references.qmd
+
+bibliography: references.bib
+csl: sanbi.csl
+reference-location: document
+
+format:
+  titlepage-pdf:
+    titlepage: formal
+    titlepage-logo: "imgs/sanbi-logo-medium.png"
+    titlepage-footer: | # text
+      National Biodiversity Assessment\
+      Technical Reports\
+      South African National Biodiversity Institute\
+      Pretoria
+    titlepage-theme:
+      elements: ["\\titleblock", "\\authorblock", "\\vfill", "\\logoblock", "\\footerblock"]
+    documentclass: scrbook
+    classoption: ["oneside", "open=any"]
+    number-sections: true 
+    toc: true
+    toc-depth: 2
+    toc-title: Contents
+    mainfont: "Arial"
+    fig-pos: 'h'
+    tbl-pos: 'h'
+    crossref:
+      sec-prefix: Section
+      fig-prefix: Figure
+      fig-title: Figure
+      tbl-prefix: Table
+      tbl-title: Table
+      fig-labels: arabic
+      tbl-labels: arabic
+      subref-labels: alpha a
+      title-delim: \.
+      
+
+language:
+  section-title-footnotes: Notes
+  
+execute:
+  echo: false 
+  warning: false 
+  message: false
+
+editor: visual
+
